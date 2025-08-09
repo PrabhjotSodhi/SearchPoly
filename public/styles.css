@@ -1,0 +1,16 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+header h1 { margin: 0 0 16px; }
+.container { max-width: 900px; margin: 0 auto; }
+.row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+input[type="text"] { flex: 1; padding: 8px; }
+button { padding: 8px 12px; }
+.checkbox { display: inline-flex; align-items: center; gap: 6px; }
+.muted { opacity: .7; }
+.chips { margin: 8px 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.chips .pill { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; }
+.card { border: 1px solid #e5e5e5; border-radius: 8px; overflow: hidden; display: flex; gap: 12px; margin: 10px 0; }
+.card img { width: 160px; height: 120px; object-fit: cover; background: #f3f3f3; }
+.card .content { padding: 8px; }
+.debug pre { background: #f8f8f8; padding: 8px; overflow: auto; }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="out">Loading...</div>
+    <script>
+        const p = new URLSearchParams(location.search);
+        fetch("/api/search?" + p).then(r => r.json()).then(d => {
+            out.innerHTML = (d.List || []).map(x => `<div><img src="${x.PictureHref || ''}" width=100> ${x.Title} - ${x.PriceDisplay}</div>`).join("") || "No results";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "searchpoly-mvp",
+  "version": "1.0.0",
+  "description": "Natural language property search MVP using Trade Me API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.12.2"
+  },
+  "keywords": [
+    "property",
+    "search",
+    "trademe",
+    "openai",
+    "mvp"
+  ],
+  "author": "",
+  "license": "MIT"
+}
