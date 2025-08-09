@@ -6,6 +6,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.static("public"));
+const port = process.env.PORT || 3001;
 
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
@@ -35,4 +36,7 @@ app.get("/api/search", async (req, res) => {
   res.json(await r.json());
 });
 
-app.listen(3000, () => console.log("http://localhost:3000"));
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;
